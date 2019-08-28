@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consola": "^2.10.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.1.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.3",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-type-json": "^0.3.0",
+    "http-errors": "^1.6.3",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "pg-promise": "^9.1.1",
+    "request": "^2.88.0",
+    "socket.io": "^2.2.0",
+    "underscore": "^1.9.1",
+    "underscore.string": "^3.3.5"
+  }
+}

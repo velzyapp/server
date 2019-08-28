@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+  postgres:
+    build: ../db/
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=velzy_user
+      - POSTGRES_PASSWORD=bigwavedave
+      - POSTGRES_DB=velzy
+  nuxt:
+    build: .
+    container_name: velzy-web
+    restart: always
+    ports:
+      - "8080:8080"
+    command:
+      "npm run start"
+    environment:
+      - DATABASE_URL=postgres://velzy_user:bigwavedave@postgres/velzy
+    depends_on:
+      - postgres
+volumes:
+    db_data:
