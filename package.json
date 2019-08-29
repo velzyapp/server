@@ -9,6 +9,7 @@
     "body-parser": "^1.19.0",
     "consola": "^2.10.1",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^8.1.0",
     "ejs": "~2.6.1",
@@ -25,5 +26,10 @@
     "socket.io": "^2.2.0",
     "underscore": "^1.9.1",
     "underscore.string": "^3.3.5"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "npm": "^6.11.2",
+    "pg-monitor": "^1.2.1"
   }
 }

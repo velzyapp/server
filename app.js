@@ -9,16 +9,22 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes');
 const graphqlHTTP = require("express-graphql");
 const consola = require('consola');
+const cors = require("cors");
 
 const app = express();
 
 const Velzy = require("./lib/velzy");
-const db = require("./db.json");
+
+if(process.env.NODE_ENV !== "production"){
+  const monitor = require('pg-monitor');
+  monitor.attach({});
+}
 
 start = async function(){
   await Velzy.initListener();
-
   const graphSchema = await Velzy.graphQLSchema();
+
+  app.use(cors())
   app.use(
     "/graphql",
     graphqlHTTP({
