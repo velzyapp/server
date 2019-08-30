@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "install": "^0.13.0",
-    "npm": "^6.11.2",
-    "pg-monitor": "^1.2.1"
+    "npm": "^6.11.2"
   }
 }

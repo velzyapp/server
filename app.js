@@ -15,10 +15,6 @@ const app = express();
 
 const Velzy = require("./lib/velzy");
 
-if(process.env.NODE_ENV !== "production"){
-  const monitor = require('pg-monitor');
-  monitor.attach({});
-}
 
 start = async function(){
   await Velzy.initListener();

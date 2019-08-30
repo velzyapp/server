@@ -9,7 +9,7 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_USER=velzy_user
-      - POSTGRES_PASSWORD=bigwavedave
+      - POSTGRES_PASSWORD=bigwavedale
       - POSTGRES_DB=velzy
   nuxt:
     build: .
@@ -20,7 +20,7 @@ services:
     command:
       "npm run start"
     environment:
-      - DATABASE_URL=postgres://velzy_user:bigwavedave@postgres/velzy
+      - DATABASE_URL=postgres://velzy_user:bigwavedale@postgres/velzy
     depends_on:
       - postgres
 volumes:
