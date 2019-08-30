@@ -73,19 +73,23 @@ start = async function(){
   const server = http.createServer(app);
   const io = require('socket.io').listen(server);
 
+  //say hello?
   io.on('connection', async (socket) => {
-    //each socket needs to be able to receive a broadcast
-    Velzy.wireEvent(socket);
     consola.success({
       message: `Client connected: ${socket.id}`,
       badge: true
     })
   });
 
+
+  //hook up realtime
+  Velzy.wireEvents(io);
+
   server.listen(port);
   server.on('error', (error) => {
     consola.error(error)
   });
+
   server.on('listening', () => {
     consola.ready({
       message: `Velzy up and running on ${port}`,

@@ -7,7 +7,6 @@ WORKDIR ${APP_ROOT}
 ADD . ${APP_ROOT}
 
 RUN npm install
-RUN npm run build
 
 EXPOSE 8080
 
