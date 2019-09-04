@@ -19,13 +19,15 @@
     "graphql-iso-date": "^3.6.1",
     "graphql-type-json": "^0.3.0",
     "http-errors": "^1.6.3",
+    "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
     "pg-promise": "^9.1.1",
     "request": "^2.88.0",
     "socket.io": "^2.2.0",
     "underscore": "^1.9.1",
-    "underscore.string": "^3.3.5"
+    "underscore.string": "^3.3.5",
+    "uuid-apikey": "^1.4.4"
   },
   "devDependencies": {
     "install": "^0.13.0",

@@ -1,7 +1,7 @@
 IMAGE=robconery/velzy
 
 serve:
-	supervisor -w lib,routes,views app.js
+	supervisor -w app.js,lib,routes,views app.js
 
 image:
 	docker build -t $(IMAGE) .
