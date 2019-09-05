@@ -7,6 +7,8 @@ const http = require("http");
 
 const bodyParser = require('body-parser');
 const indexRouter = require('./routes');
+const apiRouter = require("./routes/api");
+
 const graphqlHTTP = require("express-graphql");
 const consola = require('consola');
 const cors = require("cors");
@@ -50,6 +52,7 @@ start = async function(){
 
   //routes
   app.use('/', indexRouter);
+  app.use('/v1/api/', apiRouter);
 
   // catch 404 and forward to error handler
   app.use(function (req, res, next) {
