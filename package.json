@@ -31,6 +31,6 @@
   },
   "devDependencies": {
     "install": "^0.13.0",
-    "npm": "^6.11.2"
+    "npm": "^6.13.4"
   }
 }
