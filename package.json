@@ -24,7 +24,7 @@
     "morgan": "^1.9.1",
     "pg-promise": "^9.1.1",
     "request": "^2.88.0",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "underscore": "^1.9.1",
     "underscore.string": "^3.3.5",
     "uuid-apikey": "^1.4.4"
